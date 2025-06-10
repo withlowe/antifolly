@@ -1,0 +1,21 @@
+.container {
+    max-width: 36rem;
+    padding: 0 1rem;
+    margin: 0.5rem auto 3rem;
+  }
+  
+  .header {
+    flex: auto;
+    width: 100vw;
+    padding:12PX;
+    text-align: center;
+    border-bottom:1PX solid #E9E9E9;
+    background-color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+  
+  .backToHome {
+    margin: 3rem auto 3rem;
+    max-width: 36rem;
+    padding: 0 1rem;
+  }
