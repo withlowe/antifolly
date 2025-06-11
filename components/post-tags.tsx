@@ -10,7 +10,7 @@ export default function PostTags({ tags }: PostTagsProps) {
       {tags.map((tag) => (
         <span
           key={tag}
-          className="inline-block px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs font-mono border border-gray-200"
+          className="inline-block px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded text-xs font-mono border border-gray-200 dark:border-gray-600"
         >
           {tag}
         </span>

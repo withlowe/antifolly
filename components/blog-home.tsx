@@ -36,7 +36,7 @@ export default function BlogHome({ allPostsData, allTags }: BlogHomeProps) {
 
   return (
     <>
-      <section className="text-lg leading-relaxed mb-8">
+      <section className="text-lg leading-relaxed mb-8 text-gray-700 dark:text-gray-300">
         <p>
           Lorem ipsum dolor sit ame. Ut enim ad minim ves nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -48,23 +48,28 @@ export default function BlogHome({ allPostsData, allTags }: BlogHomeProps) {
       )}
 
       <section className="pt-1">
-        <h2 className="text-2xl font-medium leading-snug mb-4">Contents {selectedTag && `(${selectedTag})`}</h2>
+        <h2 className="text-2xl font-medium leading-snug mb-4 text-gray-900 dark:text-gray-100">
+          Contents {selectedTag && `(${selectedTag})`}
+        </h2>
         <ul className="list-none p-0 m-0">
           {filteredPosts.map(({ id, date, title, tags }) => (
             <li key={id} className="mb-5">
-              <Link href={`/posts/${id}`} className="text-xl font-medium">
+              <Link
+                href={`/posts/${id}`}
+                className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-red-500 dark:hover:text-red-300 transition-colors border-b-2 border-gray-300 dark:border-gray-600 hover:border-red-500 dark:hover:border-red-300"
+              >
                 {title}
               </Link>
               <PostTags tags={tags} />
               <br />
-              <small className="text-gray-600">
+              <small className="text-gray-600 dark:text-gray-400">
                 <Date dateString={date} />
               </small>
             </li>
           ))}
         </ul>
         {filteredPosts.length === 0 && selectedTag && (
-          <p className="text-gray-600">No posts found with the tag "{selectedTag}".</p>
+          <p className="text-gray-600 dark:text-gray-400">No posts found with the tag "{selectedTag}".</p>
         )}
       </section>
     </>

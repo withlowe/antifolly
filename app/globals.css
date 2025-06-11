@@ -2,14 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
+html {
   font-family: Charter, Georgia, Times, serif;
   line-height: 1.6;
   font-size: 17px;
   letter-spacing: 0.018rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  color: #111827;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: #f9fafb;
+  }
 }
 
 * {
@@ -23,8 +34,21 @@ a {
 }
 
 a:hover {
+  color: #fa3546;
+  border-bottom-color: #fa3546;
   text-decoration: none;
-  color: #ff6b44;
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #ffffff;
+    border-bottom-color: #6b7280;
+  }
+
+  a:hover {
+    color: #fca5a5;
+    border-bottom-color: #fca5a5;
+  }
 }
 
 img {

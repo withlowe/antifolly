@@ -35,13 +35,13 @@ export default function Post({ params }: { params: { id: string } }) {
 
   return (
     <Layout>
-      <article>
-        <h1 className="text-3xl font-medium leading-tight mb-2">{postData.title}</h1>
+      <article className="prose prose-lg dark:prose-invert max-w-none">
+        <h1 className="text-3xl font-medium leading-tight mb-2 text-gray-900 dark:text-gray-100">{postData.title}</h1>
         <PostTags tags={postData.tags} />
-        <div className="text-gray-600 mb-6">
+        <div className="text-gray-600 dark:text-gray-400 mb-6">
           <Date dateString={postData.date} />
         </div>
-        <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
   )
